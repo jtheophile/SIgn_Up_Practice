@@ -7,32 +7,40 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Form Styling</title>
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" />
-  <style> 
-  * {box-sizing: border-box; 
-    width: 400px
-     }  
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-      /* 
+    /* 
         -May want to add "border-box for "box-sizing so padding does not affect width
         -Reset margin and padding 
        */
 
-    body
-
-       { background: #344a72;
-        font-family: 'Raleway', sans-serif;
+    body {
+      background: #344a72;
+      font-family: 'Raleway', sans-serif;
     }
-      /* 
+
+    /* 
           -Background color is #344a72
         */
 
     a {
+      text-decoration:none
       /* 
         Underlined links are ugly :)
        */
     }
 
     #container {
+      max-width: 400px;
+      margin-top: 3;
+      margin-right: auto;
+      margin-bottom: 30px;
+      margin-left: auto;
+      background-color: white;
+      padding: 15px;
       /* 
         -Remember, margin: auto on left and right will center a block element 
         -I would also set a "max-width" for responsiveness
@@ -44,35 +52,50 @@
       /* 
           This is the white area around the form and heading, etc
         */
-        background: white;
+      background: white;
     }
 
     .form-wrap h1,
-    .form-wrap p {
+    .form-wrap p {text-align: center;
+
       /* 
           May want to center these
         */
     }
 
     .form-wrap .form-group {
+
+      display: block;
       /* 
           Each label, input is wrapped in .form-group
         */
     }
 
     .form-wrap .form-group label {
+      padding: 10px;
       /* 
           Label should be turned into a block element
         */
+      display: block;
     }
 
     .form-wrap .form-group input {
       /* 
           Inputs should reach accross the .form-wrap 100% and have some padding
         */
+      width: 100%;
+      padding: 10px;
+      border-radius:5px;
     }
 
     .form-wrap button {
+      background: #49c1a2;
+      width: 100%;
+      color: white;
+      text-emphasis: em;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
       /* 
           Button should wrap accross 100% and display as block
           Background color for button is #49c1a2
@@ -80,24 +103,38 @@
     }
 
     .form-wrap button:hover {
+      background-color: #37a08e;
+      cursor:pointer;
+
       /* 
           Hover background color for button is #37a08e
         */
     }
 
     .form-wrap .bottom-text {
+      font-size: 14px;
+      color: black;
+      text-decoration: none;
+
       /* 
           Bottom text is smaller
         */
     }
 
     footer {
+      color: white;
+      text-align: center;
+      font-size: 14px;
       /* 
         Should be centered
        */
     }
 
     footer a {
+      color: #49c1a2;
+      text-align: center;
+      font-size: 14px;
+      text-decoration: none;
       /* 
           Footer link color is #49c1a2
         */
@@ -131,18 +168,19 @@
           <label for="password2">Confirm Password</label>
           <input type="password" name="pasword2" id="password2" />
         </div>
+        <br>
         <button type="submit" class="btn">Sign Up</button>
         <p class="bottom-text">
           By clicking the Sign Up button, you agree to our
           <a href="#">Terms & Conditions</a> and
-          <a href="#">Privacy Policy</a>
+          <a href="#">Privacy Policy.</a>
         </p>
       </form>
     </div>
-    <footer>
-      <p>Already have an account? <a href="#">Login Here</a></p>
-    </footer>
-  </div>
+     </div>
+  <footer>
+    <p>Already have an account? <a href="#">Login Here</a></p>
+  </footer>
 </body>
 
 </html>
